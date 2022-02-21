@@ -1,6 +1,6 @@
 [user]
-	email = ksami.ihide@gmail.com
-	name = ksami
+	email = timothy.teh@dyson.com
+	name = tteh
 [push]
   default = simple
 [color]
@@ -11,25 +11,36 @@
   ui = true
   pager = true
 [alias]
-    st = status
-    cm = commit -m
-    c = commit -m
-    df = diff
-    lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
-    ad = add .
-    au = add -u
-    a = add .
-    ps = push
-    pu = push -u origin
-    pl = pull
-    pp = pull --prune
-    fe = fetch
-    fp = fetch --prune
-    re = rebase
-    bd = branch -d
-    ba = branch -a
-    ch = checkout
-    cb = checkout -b
-    sh = stash
-    sp = stash pop
-    sl = stash list
+  st = status
+  cm = commit -m
+  c = commit -m
+  df = diff
+  lg = log --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit 
+  lga = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit  
+  ad = add .
+  au = add -u
+  a = add .
+  ps = push
+  pu = push -u origin
+  pl = pull
+  pp = pull --prune
+  fe = fetch
+  fp = fetch --prune
+  re = rebase
+  bd = branch -d
+  ba = branch -a
+  ch = checkout
+  cb = checkout -b
+  sh = stash
+  sp = stash pop
+  sl = stash list
+  dc = checkout -- .
+  us = reset HEAD --
+  cl = clean -xfd
+  dft = difftool --dir-diff --no-symlinks
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	trustExitCode = true
